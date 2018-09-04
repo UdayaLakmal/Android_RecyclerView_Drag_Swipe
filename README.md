@@ -1,4 +1,4 @@
-# Android RecyclerView Drag Swipe ReArrange items.
+# Android RecyclerView drag swipe rearrange items.
 Basic example of using  drag &amp; drop and swipe for RecyclerView.
 
 This is basic example of  swipe & drag and drop support for RecyclerView without any additional libraries. Based on [Android-ItemTouchHelper-Demo](https://github.com/iPaulPro/Android-ItemTouchHelper-Demo).
