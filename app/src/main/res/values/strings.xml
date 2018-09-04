@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RecyclerViewDragSwipe</string>
+    <array name="main_items">
+        <item>List - Basic Drag and Swipe</item>
+        <item>Grid - Basic Swipe</item>
+    </array>
+</resources>
