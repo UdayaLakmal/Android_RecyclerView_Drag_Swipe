@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Paul Burke
+ * Copyright (C) 2018 Udaya Lakmal Rathnasiri
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnLi
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-       // setSupportActionBar((Toolbar) findViewById(R.id.toolbar));
 
         if (savedInstanceState == null) {
             MainFragment fragment = new MainFragment();

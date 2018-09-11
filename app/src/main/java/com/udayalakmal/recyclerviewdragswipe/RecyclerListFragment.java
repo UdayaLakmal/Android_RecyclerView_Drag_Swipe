@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Paul Burke
+ * Copyright (C) 2018 Udaya Lakmal Rathnasiri
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-import com.udayalakmal.recyclerviewdragswipe.helper.OnCustomerListChangedListener;
+import com.udayalakmal.recyclerviewdragswipe.helper.OnItemListChangedListener;
 import com.udayalakmal.recyclerviewdragswipe.helper.OnStartDragListener;
 import com.udayalakmal.recyclerviewdragswipe.helper.SimpleItemTouchHelperCallback;
 
@@ -66,11 +66,11 @@ public class RecyclerListFragment extends Fragment implements OnStartDragListene
         list.add("Eight");
         list.add("Nine");
         list.add("Ten");
-        RecyclerListAdapter adapter = new RecyclerListAdapter(getActivity(), this, list, new OnCustomerListChangedListener() {
+        RecyclerListAdapter adapter = new RecyclerListAdapter(getActivity(), this, list, new OnItemListChangedListener() {
             @Override
-            public void onNoteListChanged(List<String> changedList) {
+            public void onListChanged(List<String> changedList) {
                 ArrayList<String> mItems = (ArrayList<String>) changedList;
-                System.out.println("Item rearranged" );
+                System.out.println("Item modified." );
 
                 for(int i= 0; i< mItems.size(); i++){
                     System.out.print(" "+  mItems.get(i));

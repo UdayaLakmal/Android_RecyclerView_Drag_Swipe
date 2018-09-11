@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 Paul Burke
+ * Copyright (C) 2018 Udaya Lakmal Rathnasiri
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.udayalakmal.recyclerviewdragswipe.helper.OnCustomerListChangedListener;
+import com.udayalakmal.recyclerviewdragswipe.helper.OnItemListChangedListener;
 import com.udayalakmal.recyclerviewdragswipe.helper.OnStartDragListener;
 import com.udayalakmal.recyclerviewdragswipe.helper.SimpleItemTouchHelperCallback;
 
@@ -66,11 +66,11 @@ public class RecyclerGridFragment extends Fragment implements OnStartDragListene
         list.add("Ten");
 
 
-        adapter = new RecyclerListAdapter(getActivity(), this, list, new OnCustomerListChangedListener() {
+        adapter = new RecyclerListAdapter(getActivity(), this, list, new OnItemListChangedListener() {
             @Override
-            public void onNoteListChanged(List<String> changedList) {
+            public void onListChanged(List<String> changedList) {
                 ArrayList<String> mItems = (ArrayList<String>) changedList;
-                System.out.println("final Item rearanged");
+                System.out.println("Item rearranged");
 
                 for (int i = 0; i < mItems.size(); i++) {
                     System.out.print(" " + mItems.get(i));
@@ -83,7 +83,7 @@ public class RecyclerGridFragment extends Fragment implements OnStartDragListene
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        final int spanCount = 4;
+        final int spanCount = 4; // column width
         final GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), spanCount);
         recyclerView.setLayoutManager(layoutManager);
 
